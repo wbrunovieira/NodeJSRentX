@@ -1,5 +1,4 @@
-import { request, response, Router } from "express";
-import { v4 as uuidv4 } from "uuid";
+import { Router } from "express";
 
 import { CategoriesRepository } from "../repositories/CategoriesRepository";
 import { CreateCategoryService } from "../services/CreateCategoryService";
