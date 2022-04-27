@@ -1,5 +1,5 @@
 import { CategoriesRepository } from '../../repositories/CategoriesRepository';
-import { CreateCategoryUseCase } from './CreateCategoryUsecase';
+import { CreateCategoryUseCase } from './CreateCategoryUseCase';
 import { CreateCategoryController } from './CreateCategoryController';
 // eslint-disable-next-line import/no-unresolved
 
