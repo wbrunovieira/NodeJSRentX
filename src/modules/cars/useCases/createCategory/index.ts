@@ -3,7 +3,7 @@ import { CreateCategoryUseCase } from './CreateCategoryUseCase';
 import { CreateCategoryController } from './CreateCategoryController';
 // eslint-disable-next-line import/no-unresolved
 
-const categoriesRepository = new CategoriesRepository();
+const categoriesRepository = CategoriesRepository.getInstance();
 
 const createCategoryUseCase = new CreateCategoryUseCase(categoriesRepository);
 
