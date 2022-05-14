@@ -1,6 +1,6 @@
-import { Category } from "../entities/Category";
-import { Specification } from "../entities/Specification";
-import { ICreateCategoruDTO } from "./ICategoriesRepository";
+import { Category } from '../entities/Category';
+import { Specification } from '../entities/Specification';
+import { ICreateCategoruDTO } from './ICategoriesRepository';
 
 interface ICreateSpecificationDTO {
   name: string;
