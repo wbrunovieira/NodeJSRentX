@@ -8,6 +8,8 @@ class User {
 
   @Column()
   name: string;
+  @Column()
+  username: string;
 
   @Column()
   password: string;
