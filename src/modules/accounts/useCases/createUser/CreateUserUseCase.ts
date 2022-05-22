@@ -33,6 +33,3 @@ class CreateUserUseCase {
 }
 
 export { CreateUserUseCase };
-function findByName(name: string, string: any) {
-  throw new Error('Function not implemented.');
-}
