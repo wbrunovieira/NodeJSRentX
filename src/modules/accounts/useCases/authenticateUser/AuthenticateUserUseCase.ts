@@ -23,16 +23,16 @@ class AuthenticateUserUseCase {
     private usersRepository: IUsersRepository,
   ) {}
   async execute({ email, password }: IRequest): Promise<IResponse> {
-    const user = await this.usersRepository.findByName(email);
+    const user = await this.usersRepository.findByEmail(email);
 
     if (!user) {
-      throw new Error('email/password incorrect');
+      throw new Error('email incorrect');
     }
 
     const passwordMath = compare(password, user.password);
 
     if (!passwordMath) {
-      throw new Error('email/password incorrect');
+      throw new Error('password incorrect');
     }
 
     const token = sign({}, '23b8f629c49973f5dc52ce503cd49d49', {
