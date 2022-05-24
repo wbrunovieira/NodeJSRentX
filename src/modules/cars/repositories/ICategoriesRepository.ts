@@ -1,6 +1,6 @@
 import { Category } from '../entities/Category';
 
-interface ICreateCategoruDTO {
+interface ICreateCategoryDTO {
   name: string;
   description: string;
 }
@@ -8,7 +8,7 @@ interface ICreateCategoruDTO {
 interface ICategoriesRepository {
   findByName(name: string): Promise<Category>;
   list(): Promise<Category[]>;
-  create({ name, description }: ICreateCategoruDTO): Promise<void> | undefined;
+  create({ name, description }: ICreateCategoryDTO): Promise<void> | undefined;
 }
 
-export { ICategoriesRepository, ICreateCategoruDTO };
+export { ICategoriesRepository, ICreateCategoryDTO };
