@@ -1,4 +1,4 @@
-import { AppError } from '@errors/AppError';
+import { AppError } from '@shared/errors/AppError';
 import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
 import { UsersRepositoryInMemory } from '@modules/accounts/repositories/in-memory/UserRepositoyyInMemory';
 
@@ -45,12 +45,12 @@ describe('Authenticate user', () => {
     }).rejects.toBeInstanceOf(AppError);
   });
 
-  it('should not be able to authenticate with incorrect password', () => {
+  it('should not be able to authenticate with incorrect password', async () => {
     expect(async () => {
       const user: ICreateUserDTO = {
         driver_license: '9999',
         email: 'user@email.com',
-        password: '1234',
+        password: '12345',
         name: 'User test Error',
       };
 
