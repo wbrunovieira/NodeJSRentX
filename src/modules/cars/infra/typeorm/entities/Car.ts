@@ -27,6 +27,7 @@ class Car {
     if (!this.id) {
       this.id = uuidV4();
       this.available = true;
+      this.created_at = new Date();
     }
   }
 }
