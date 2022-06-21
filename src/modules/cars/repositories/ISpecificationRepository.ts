@@ -1,15 +1,17 @@
-import { Category } from '../infra/typeorm/entities/Category';
-import { Specification } from '../infra/typeorm/entities/Specification';
-import { ICreateCategoruDTO } from './ICategoriesRepository';
+import { Specification } from '@modules/cars/infra/typeorm/entities/Specification';
 
 interface ICreateSpecificationDTO {
   name: string;
   description: string;
 }
 
-interface ISpecificationRepository {
-  create({ name, description }: ICreateSpecificationDTO): Promise<void>;
+interface ISpecificationsRepository {
+  create({
+    description,
+    name,
+  }: ICreateSpecificationDTO): Promise<Specification>;
   findByName(name: string): Promise<Specification>;
+  findByIds(ids: string[]): Promise<Specification[]>;
 }
 
-export { ISpecificationRepository, ICreateSpecificationDTO };
+export { ISpecificationsRepository, ICreateSpecificationDTO };
