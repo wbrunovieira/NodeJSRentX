@@ -59,8 +59,6 @@ class ImportCategoryUseCase {
         });
       }
     });
-
-    console.log(categories);
   }
 }
 
