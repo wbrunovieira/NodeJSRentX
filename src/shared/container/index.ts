@@ -3,7 +3,7 @@ import { container } from 'tsyringe';
 import { UsersRepository } from '@modules/accounts/infra/typeorm/repositories/UsersRepository';
 import { IUsersRepository } from '@modules/accounts/repositories/IUsersRepository';
 import { CarsImagesRepository } from '@modules/cars/infra/typeorm/repositories/CarImagesRepository';
-import { CarsRepository } from '@modules/cars/infra/typeorm/repositories/CarRepository';
+import { CarsRepository } from '@modules/cars/infra/typeorm/repositories/CarsRepository';
 import { CategoriesRepository } from '@modules/cars/infra/typeorm/repositories/CategoryRepository';
 import { SpecificationsRepository } from '@modules/cars/infra/typeorm/repositories/SpecificationRepository';
 import { ICarsImagesRepository } from '@modules/cars/repositories/ICarsImagesRepository';
