@@ -2,7 +2,6 @@ import { NextFunction, Request, Response } from 'express';
 import { verify } from 'jsonwebtoken';
 
 import auth from '@config/auth';
-import { UsersRepository } from '@modules/accounts/infra/typeorm/repositories/UsersRepository';
 import { UsersTokensRepository } from '@modules/accounts/infra/typeorm/repositories/UsersTokensRepositories';
 import { AppError } from '@shared/errors/AppError';
 
@@ -29,6 +28,7 @@ export async function ensureAuthenticated(
     ) as IPayload;
 
     const userTokensRepository = new UsersTokensRepository();
+
     const user = await userTokensRepository.findByUserIdAndRefreshToken(
       user_id,
       token,
