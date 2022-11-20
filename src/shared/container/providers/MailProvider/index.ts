@@ -9,5 +9,5 @@ const mailProvider = {
 
 container.registerInstance<IMailProvider>(
   'EtherealMailProvider',
-  new EtherealMailProvider(),
+  container.resolve(EtherealMailProvider),
 );
