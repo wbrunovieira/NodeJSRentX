@@ -39,7 +39,7 @@ carsRoutes.get('/available', listAvailableCarsController.handle);
 carsRoutes.post(
   '/images/:id',
   ensureAuthenticated,
-  ensureAdmin,
+  // ensureAdmin,
   upload.array('images'),
   uploadCarImagesController.handle,
 );
